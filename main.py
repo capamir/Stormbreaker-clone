@@ -10,7 +10,9 @@ class Main(Menu):
     def __init__(self):
         self.start_app()
     
-    def get_input(self):
+    def select_option(self):
+        self.show_menu()
+
         try:
             user_input =  input(Fore.RED+" ┌─["+Fore.LIGHTGREEN_EX+"STORM-BREAKER"+Fore.BLUE+"~"+Fore.WHITE+"@HOME"+Fore.RED+"""]
  └──╼ """+Fore.WHITE+"$ ")
@@ -30,8 +32,7 @@ class Main(Menu):
 
     def start_app(self):
         while True:
-            self.show_menu()
-            self.get_input()
+            self.select_option()
 
 
 Main()
