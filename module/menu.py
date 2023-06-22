@@ -6,6 +6,7 @@ class Menu:
     reset = Style.RESET_ALL
         
     def banner(self):
+        self.clear()
         print(Fore.RED+"""
 $$\   $$\  $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$\  
 $$ |  $$ |$$  __$$\ $$  __$$\ $$ | $$  |$$  _____|$$  __$$\ 
@@ -60,17 +61,14 @@ $$ |  $$ |$$ |  $$ |\$$$$$$  |$$ | \$$\ $$$$$$$$\ $$ |  $$ |
             os.system("clear")
 
     def show_menu(self):
-        self.clear()
         self.banner()
         self.infolist()
     
     def show_builder_menu(self):
-        self.clear()
         self.banner()
         self.builder_menu()
     
     def show_platform_menu(self):
-        self.clear()
         self.banner()
         self.platform_menu()
     
