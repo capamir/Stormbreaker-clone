@@ -4,9 +4,6 @@ import os, platform
 
 class Menu:
     reset = Style.RESET_ALL
-    def __init__(self):
-        # self.show_menu()
-        pass
         
     def banner(self):
         print(Fore.RED+"""
@@ -33,7 +30,28 @@ $$ |  $$ |$$ |  $$ |\$$$$$$  |$$ | \$$\ $$$$$$$$\ $$ |  $$ |
         sleep(0.1)
         print(Fore.RED+"[4]"+Fore.WHITE+" Exit ... \n"+self.reset)
 
-    
+    def builder_menu(self):
+        sleep(0.1)
+        print(Fore.RED+" ["+Fore.WHITE+"*"+Fore.RED+"]"+Fore.CYAN+" Choose one of the options below. \n")
+        sleep(0.1)
+        print(Fore.RED+"[1]"+Fore.WHITE+" Build c Payload \n")
+        sleep(0.1)
+        print(Fore.RED+"[2]"+Fore.WHITE+" Back to menu \n")
+        sleep(0.1)
+        print(Fore.RED+"[3]"+Fore.WHITE+" Exit ... \n"+self.reset)
+
+    def platform_menu(self):
+        sleep(0.1)
+        print(Fore.RED+" ["+Fore.WHITE+"*"+Fore.RED+"]"+Fore.CYAN+" Choose your platform. \n")
+        sleep(0.1)
+        print(Fore.RED+"[1]"+Fore.WHITE+" Linux \n")
+        sleep(0.1)
+        print(Fore.RED+"[2]"+Fore.WHITE+" Windows \n")
+        sleep(0.1)
+        print(Fore.RED+"[2]"+Fore.WHITE+" Back to menu \n")
+        sleep(0.1)
+        print(Fore.RED+"[4]"+Fore.WHITE+" Exit ... \n"+self.reset)
+
     def clear(self):
         osname = platform.uname()[0]
         if osname == "Windows":
@@ -45,4 +63,14 @@ $$ |  $$ |$$ |  $$ |\$$$$$$  |$$ | \$$\ $$$$$$$$\ $$ |  $$ |
         self.clear()
         self.banner()
         self.infolist()
+    
+    def show_builder_menu(self):
+        self.clear()
+        self.banner()
+        self.builder_menu()
+    
+    def show_platform_menu(self):
+        self.clear()
+        self.banner()
+        self.platform_menu()
     
