@@ -47,6 +47,12 @@ class Builder(Menu):
         
         self.banner()
 
+        payload_data = ""
+        with open("payloads/generate.c", 'w') as f:
+            f.write(payload_data)
+
+        
+
         print(Fore.BLUE+" Your payload is running...")
         input(Fore.LIGHTRED_EX+" [*] Back to Menu (Press Enter...) "+self.reset)
     
